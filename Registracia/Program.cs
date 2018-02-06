@@ -20,7 +20,7 @@ namespace Registracia
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("http://bolshoy.itech-test.ru/");
             
-            var human= (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"body\"]/div[2]/div[1]/div[2]/div[3]/a[3]/svg")));
+            var human= (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".gh-extras > a:nth-child(3) > svg:nth-child(1)")));
                 human.Click();
             var registracia= (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"body\"]/div[2]/div[4]/div[2]/div/div[2]/a[2]")));
                 registracia.Click();
