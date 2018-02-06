@@ -67,7 +67,7 @@ namespace Registracia
             var checkbox = driver.FindElement(By.XPath("//*[@id=\"body\"]/div[2]/div[4]/div[2]/div/div[3]/div/div[2]/div/div/form/div[8]/div/div[1]/div/label/input"));
                 checkbox.Click();
             var button = driver.FindElement(By.ClassName("is-button-a js-form-submit"));
-                button.Click();
+                button.Click(); 
             text= (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.ClassName("is-personal-escape"))).Text;
         }
     }
