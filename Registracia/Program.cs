@@ -64,7 +64,7 @@ namespace Registracia
                 password.SendKeys("123456");
             var passsword1 = (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.Name("REGISTER[CONFIRM_PASSWORD]")));
                 passsword1.SendKeys("123456");
-            var checkbox = driver.FindElement(By.ClassName("_field-inited"));
+            var checkbox = driver.FindElement(By.XPath("//*[@id=\"body\"]/div[2]/div[4]/div[2]/div/div[3]/div/div[2]/div/div/form/div[8]/div/div[1]/div/label/input"));
                 checkbox.Click();
             var button = driver.FindElement(By.ClassName("div.is-form-field:nth-child(1) > label:nth-child(1) > i:nth-child(2)"));
                 button.Click(); 
