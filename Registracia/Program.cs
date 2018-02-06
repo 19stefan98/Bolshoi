@@ -66,7 +66,7 @@ namespace Registracia
                 passsword1.SendKeys("123456");
             var checkbox = driver.FindElement(By.ClassName("_field-inited"));
                 checkbox.Click();
-            var button = driver.FindElement(By.ClassName("is-button-a js-form-submit"));
+            var button = driver.FindElement(By.ClassName("div.is-form-field:nth-child(1) > label:nth-child(1) > i:nth-child(2)"));
                 button.Click(); 
             text= (new WebDriverWait(driver, timeout)).Until(ExpectedConditions.ElementIsVisible(By.ClassName("is-personal-escape"))).Text;
         }
